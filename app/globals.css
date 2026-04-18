@@ -1,26 +1,58 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-bg-primary: #FAFAF8;
+  --color-bg-white: #FFFFFF;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+  --color-accent: #C4703E;
+  --color-border: #EEEEEE;
+  --color-border-input: #D4D4D4;
+
+  /* Font family */
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 72px;
+
+  /* Border radius */
+  --radius-button: 8px;
+  --radius-card: 10px;
+  --radius-input: 8px;
+  --radius-image: 12px;
+
+  /* Max width */
+  --container-layout: 1120px;
+  --container-article: 680px;
+  --container-form: 520px;
+  --container-signup: 420px;
+
+  /* Box shadow */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  /* Letter spacing */
+  --tracking-tight-h1: -0.8px;
+  --tracking-tight-h2: -0.5px;
+  --tracking-tight-h3: -0.3px;
+  --tracking-label: 2px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAFAF8;
+  color: #1A1A1A;
+  font-family: 'Inter', system-ui, sans-serif;
 }
