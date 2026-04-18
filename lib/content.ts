@@ -1,6 +1,4 @@
-import matter from "gray-matter";
-import readingTime from "reading-time";
-import { articles as contentRegistry } from "./articles-data";
+import { articles as data, type ArticleData } from "./articles-data";
 
 export interface ArticleMeta {
   slug: string;
@@ -17,37 +15,31 @@ export interface Article extends ArticleMeta {
   content: string;
 }
 
-function parseArticle(slug: string, raw: string): Article {
-  const { data, content } = matter(raw);
-  const stats = readingTime(content);
+function toMeta(a: ArticleData): ArticleMeta {
+  const words = a.content.split(/\s+/).length;
   return {
-    slug,
-    title: data.title || slug,
-    subtitle: data.subtitle || "",
-    industry: data.industry || "",
-    country: data.country || "",
-    date: data.date || "",
-    readingTime: `${Math.ceil(stats.minutes)}`,
-    number: data.number || 0,
-    content,
+    slug: a.slug,
+    title: a.title,
+    subtitle: a.subtitle,
+    industry: a.industry,
+    country: a.country,
+    date: a.date,
+    readingTime: `${Math.max(1, Math.ceil(words / 200))}`,
+    number: a.number,
   };
 }
 
 export function getArticles(locale: string): ArticleMeta[] {
-  const files = contentRegistry[locale] || {};
-  const articles = Object.entries(files).map(([slug, raw]) => {
-    const { content: _, ...meta } = parseArticle(slug, raw);
-    return meta;
-  });
-  return articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const list = data[locale] || [];
+  return list.map(toMeta).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getArticle(locale: string, slug: string): Article | null {
-  const raw = contentRegistry[locale]?.[slug];
-  if (!raw) return null;
-  return parseArticle(slug, raw);
+  const a = (data[locale] || []).find((x) => x.slug === slug);
+  if (!a) return null;
+  return { ...toMeta(a), content: a.content };
 }
 
 export function getArticleSlugs(locale: string): string[] {
-  return Object.keys(contentRegistry[locale] || {});
+  return (data[locale] || []).map((a) => a.slug);
 }

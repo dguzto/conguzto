@@ -1,16 +1,45 @@
-// Auto-generated article content — update when adding new articles
-export const articles: Record<string, Record<string, string>> = {
-  es: {
-    amenitiz: `---
-title: "Así haría crecer Amenitiz"
-subtitle: "Un SaaS hotelero con producto fuerte y marketing que no le hace justicia."
-industry: "SaaS hotelero"
-country: "España"
-date: "2026-04-10"
-number: 1
----
+export interface ArticleData {
+  slug: string;
+  title: string;
+  subtitle: string;
+  industry: string;
+  country: string;
+  date: string;
+  number: number;
+  content: string;
+}
 
-## El negocio en 90 segundos
+export const articles: Record<string, ArticleData[]> = {
+  es: [
+    {
+      slug: "payhawk",
+      title: "Así haría crecer Payhawk",
+      subtitle: "Gestión de gastos con IA que está creciendo en Europa. Qué haría yo para acelerar.",
+      industry: "Spend management",
+      country: "Bulgaria",
+      date: "2026-04-24",
+      number: 3,
+      content: "*Artículo en desarrollo. Próximamente.*",
+    },
+    {
+      slug: "lemlist",
+      title: "Así haría crecer Lemlist",
+      subtitle: "Una plataforma de sales engagement con un producto diferenciado y un canal de contenido que pocos aprovechan.",
+      industry: "Sales engagement",
+      country: "Francia",
+      date: "2026-04-17",
+      number: 2,
+      content: "*Artículo en desarrollo. Próximamente.*",
+    },
+    {
+      slug: "amenitiz",
+      title: "Así haría crecer Amenitiz",
+      subtitle: "Un SaaS hotelero con producto fuerte y marketing que no le hace justicia.",
+      industry: "SaaS hotelero",
+      country: "España",
+      date: "2026-04-10",
+      number: 1,
+      content: `## El negocio en 90 segundos
 
 Amenitiz es un SaaS todo-en-uno para hoteles independientes y pequeñas cadenas. Web, motor de reservas, channel manager, pagos. Fundado en Barcelona, presente en 8 países.
 
@@ -38,40 +67,38 @@ Si solo pudiera hacer una cosa esta semana: reescribir el hero para hablar del d
 ## La lección
 
 ¿Tu web dice lo que haces o dice por qué le importa a tu cliente?`,
-
-    lemlist: `---
-title: "Así haría crecer Lemlist"
-subtitle: "Una plataforma de sales engagement con un producto diferenciado y un canal de contenido que pocos aprovechan."
-industry: "Sales engagement"
-country: "Francia"
-date: "2026-04-17"
-number: 2
----
-
-*Artículo en desarrollo. Próximamente.*`,
-
-    payhawk: `---
-title: "Así haría crecer Payhawk"
-subtitle: "Gestión de gastos con IA que está creciendo en Europa. Qué haría yo para acelerar."
-industry: "Spend management"
-country: "Bulgaria"
-date: "2026-04-24"
-number: 3
----
-
-*Artículo en desarrollo. Próximamente.*`,
-  },
-  en: {
-    amenitiz: `---
-title: "How I'd grow Amenitiz"
-subtitle: "A hotel SaaS with a strong product and marketing that doesn't do it justice."
-industry: "Hotel SaaS"
-country: "Spain"
-date: "2026-04-10"
-number: 1
----
-
-## The business in 90 seconds
+    },
+  ],
+  en: [
+    {
+      slug: "payhawk",
+      title: "How I'd grow Payhawk",
+      subtitle: "AI-powered spend management growing across Europe. What I'd do to accelerate.",
+      industry: "Spend management",
+      country: "Bulgaria",
+      date: "2026-04-24",
+      number: 3,
+      content: "*Article in progress. Coming soon.*",
+    },
+    {
+      slug: "lemlist",
+      title: "How I'd grow Lemlist",
+      subtitle: "A sales engagement platform with a differentiated product and an underused content channel.",
+      industry: "Sales engagement",
+      country: "France",
+      date: "2026-04-17",
+      number: 2,
+      content: "*Article in progress. Coming soon.*",
+    },
+    {
+      slug: "amenitiz",
+      title: "How I'd grow Amenitiz",
+      subtitle: "A hotel SaaS with a strong product and marketing that doesn't do it justice.",
+      industry: "Hotel SaaS",
+      country: "Spain",
+      date: "2026-04-10",
+      number: 1,
+      content: `## The business in 90 seconds
 
 Amenitiz is an all-in-one SaaS for independent hotels and small chains. Website, booking engine, channel manager, payments. Founded in Barcelona, operating in 8 countries.
 
@@ -99,27 +126,6 @@ If I could only do one thing this week: rewrite the hero to speak to the indepen
 ## The lesson
 
 Does your website say what you do, or does it say why your customer should care?`,
-
-    lemlist: `---
-title: "How I'd grow Lemlist"
-subtitle: "A sales engagement platform with a differentiated product and an underused content channel."
-industry: "Sales engagement"
-country: "France"
-date: "2026-04-17"
-number: 2
----
-
-*Article in progress. Coming soon.*`,
-
-    payhawk: `---
-title: "How I'd grow Payhawk"
-subtitle: "AI-powered spend management growing across Europe. What I'd do to accelerate."
-industry: "Spend management"
-country: "Bulgaria"
-date: "2026-04-24"
-number: 3
----
-
-*Article in progress. Coming soon.*`,
-  },
+    },
+  ],
 };
