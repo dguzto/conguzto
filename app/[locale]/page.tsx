@@ -1,5 +1,7 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { ArticleCard } from "@/components/ArticleCard";
+import { getArticles } from "@/lib/content";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -12,7 +14,9 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
+  const locale = await getLocale();
   const t = await getTranslations("home");
+  const articles = getArticles(locale);
 
   return (
     <div className="bg-bg-primary">
@@ -24,12 +28,16 @@ export default async function Home() {
           <div className="mt-xl"><NewsletterSignup /></div>
         </div>
       </section>
-      <section className="px-xl pb-xl">
-        <div className="max-w-[1120px] mx-auto">
-          <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("latestLabel")}</p>
-          <p className="text-text-secondary">Artículos próximamente...</p>
-        </div>
-      </section>
+      {articles.length > 0 && (
+        <section className="px-xl pb-xl">
+          <div className="max-w-[1120px] mx-auto">
+            <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("latestLabel")}</p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
+              {articles.slice(0, 3).map((article) => <ArticleCard key={article.slug} article={article} />)}
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }
