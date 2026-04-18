@@ -14,10 +14,30 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const locale = await getLocale();
+  const isEs = locale === "es";
   const { slug } = await params;
   const article = getArticle(locale, slug);
   if (!article) return { title: "Not Found" };
-  return { title: `${article.title} — Con Guzto`, description: article.subtitle };
+  const title = `${article.title} — Con Guzto`;
+  const description = article.subtitle;
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://conguzto.com${isEs ? "" : "/en"}/newsletter/${slug}`,
+      siteName: "Con Guzto",
+      locale: isEs ? "es_ES" : "en_US",
+      type: "article",
+      publishedTime: article.date,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
+  };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -29,11 +49,29 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const t = await getTranslations("article");
   const otherArticles = getArticles(locale).filter((a) => a.slug !== slug).slice(0, 2);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.subtitle,
+    datePublished: article.date,
+    author: {
+      "@type": "Person",
+      name: "Diego Guzmán",
+      url: "https://conguzto.com",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Diego Guzmán",
+    },
+  };
+
   return (
     <div className="bg-bg-primary min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <section className="pt-3xl px-xl">
         <div className="max-w-[680px] mx-auto">
-          <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">ANÁLISIS #{String(article.number).padStart(2, "0")}</p>
+          <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("analysisLabel")} #{String(article.number).padStart(2, "0")}</p>
           <h1 className="text-[30px] font-bold text-text-primary tracking-[--tracking-tight-h1] leading-[1.2]">{article.title}</h1>
           <p className="text-[15px] text-text-secondary mt-md leading-[1.6]">{article.subtitle}</p>
           <p className="text-xs text-text-muted mt-md">{article.readingTime} {t("readTime")} · {new Date(article.date).toLocaleDateString(locale === "es" ? "es-ES" : "en-US", { month: "long", year: "numeric" })}</p>

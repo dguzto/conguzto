@@ -5,9 +5,24 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEs = locale === "es";
+  const title = isEs ? "Sobre mí — Con Guzto" : "About — Con Guzto";
+  const description = isEs ? "Diego Guzmán. Construyo y analizo negocios que crecen." : "Diego Guzmán. I build and analyze growing businesses.";
   return {
-    title: isEs ? "Sobre mí — Con Guzto" : "About — Con Guzto",
-    description: isEs ? "Diego Guzmán. Construyo y analizo negocios que crecen." : "Diego Guzmán. I build and analyze growing businesses.",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://conguzto.com${isEs ? "" : "/en"}/sobre-mi`,
+      siteName: "Con Guzto",
+      locale: isEs ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
   };
 }
 
@@ -22,9 +37,9 @@ export default async function AboutPage() {
             <h1 className="text-[30px] font-bold text-text-primary tracking-[--tracking-tight-h1] leading-[1.2]">{t("about.title")}</h1>
           </div>
           <div className="space-y-md text-[16px] text-text-secondary leading-[1.7]">
-            <p>Hoy soy CMO de Mentorhood, cofundador de Good People (una agencia de marketing), y escribo esta newsletter donde analizo cómo crecen empresas.</p>
-            <p>Antes de esto pasé por roles de marketing en startups B2B, consultoría de negocio, y un máster que me enseñó más sobre lo que no quería hacer que sobre lo que sí.</p>
-            <p>Lo que me mueve es entender por qué unas empresas crecen y otras no. No desde la teoría — desde operar, equivocarme, y volver a probar.</p>
+            <p>{t("about.bio1")}</p>
+            <p>{t("about.bio2")}</p>
+            <p>{t("about.bio3")}</p>
           </div>
           <div className="flex gap-md mt-2xl">
             <a href="https://linkedin.com/in/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>

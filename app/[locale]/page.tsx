@@ -7,9 +7,24 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEs = locale === "es";
+  const title = isEs ? "Con Guzto — Aprende marketing analizando empresas" : "Con Guzto — Learn marketing by analyzing companies";
+  const description = isEs ? "Cada semana analizo una empresa y te cuento qué haría para hacerla crecer. Por Diego Guzmán." : "Every week I analyze a company and tell you what I'd do to grow it. By Diego Guzmán.";
   return {
-    title: isEs ? "Con Guzto — Aprende marketing analizando empresas" : "Con Guzto — Learn marketing by analyzing companies",
-    description: isEs ? "Cada semana analizo una empresa y te cuento qué haría para hacerla crecer. Por Diego Guzmán." : "Every week I analyze a company and tell you what I'd do to grow it. By Diego Guzmán.",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://conguzto.com${isEs ? "" : "/en"}`,
+      siteName: "Con Guzto",
+      locale: isEs ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
   };
 }
 

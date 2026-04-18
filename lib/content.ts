@@ -1,4 +1,7 @@
-import { articles as data, type ArticleData } from "./articles-data";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import readingTime from "reading-time";
 
 export interface ArticleMeta {
   slug: string;
@@ -15,31 +18,64 @@ export interface Article extends ArticleMeta {
   content: string;
 }
 
-function toMeta(a: ArticleData): ArticleMeta {
-  const words = a.content.split(/\s+/).length;
-  return {
-    slug: a.slug,
-    title: a.title,
-    subtitle: a.subtitle,
-    industry: a.industry,
-    country: a.country,
-    date: a.date,
-    readingTime: `${Math.max(1, Math.ceil(words / 200))}`,
-    number: a.number,
-  };
-}
+const contentDir = path.join(process.cwd(), "content");
 
 export function getArticles(locale: string): ArticleMeta[] {
-  const list = data[locale] || [];
-  return list.map(toMeta).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const dir = path.join(contentDir, locale);
+  if (!fs.existsSync(dir)) return [];
+
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith(".mdx"));
+
+  const articles: ArticleMeta[] = files.map((file) => {
+    const slug = file.replace(/\.mdx$/, "");
+    const raw = fs.readFileSync(path.join(dir, file), "utf-8");
+    const { data, content } = matter(raw);
+    const rt = readingTime(content);
+
+    return {
+      slug,
+      title: data.title ?? "",
+      subtitle: data.subtitle ?? "",
+      industry: data.industry ?? "",
+      country: data.country ?? "",
+      date: data.date ?? "",
+      readingTime: `${Math.max(1, Math.ceil(rt.minutes))}`,
+      number: data.number ?? 0,
+    };
+  });
+
+  return articles.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 }
 
 export function getArticle(locale: string, slug: string): Article | null {
-  const a = (data[locale] || []).find((x) => x.slug === slug);
-  if (!a) return null;
-  return { ...toMeta(a), content: a.content };
+  const file = path.join(contentDir, locale, `${slug}.mdx`);
+  if (!fs.existsSync(file)) return null;
+
+  const raw = fs.readFileSync(file, "utf-8");
+  const { data, content } = matter(raw);
+  const rt = readingTime(content);
+
+  return {
+    slug,
+    title: data.title ?? "",
+    subtitle: data.subtitle ?? "",
+    industry: data.industry ?? "",
+    country: data.country ?? "",
+    date: data.date ?? "",
+    readingTime: `${Math.max(1, Math.ceil(rt.minutes))}`,
+    number: data.number ?? 0,
+    content,
+  };
 }
 
 export function getArticleSlugs(locale: string): string[] {
-  return (data[locale] || []).map((a) => a.slug);
+  const dir = path.join(contentDir, locale);
+  if (!fs.existsSync(dir)) return [];
+
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".mdx"))
+    .map((f) => f.replace(/\.mdx$/, ""));
 }

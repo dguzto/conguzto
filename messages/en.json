@@ -45,8 +45,14 @@
     },
     "directEmail": "Or email me directly at"
   },
-  "about": { "title": "Diego Guzmán" },
-  "article": { "readTime": "min read", "keepReading": "Keep reading" },
+  "about": {
+    "title": "Diego Guzmán",
+    "tagline": "I build and analyze growing businesses.",
+    "bio1": "Today I'm CMO at Mentorhood, co-founder of Good People (a marketing agency), and I write this newsletter where I analyze how companies grow.",
+    "bio2": "Before this I worked in marketing roles at B2B startups, business consulting, and a master's degree that taught me more about what I didn't want to do than what I did.",
+    "bio3": "What drives me is understanding why some companies grow and others don't. Not from theory — from operating, making mistakes, and trying again."
+  },
+  "article": { "readTime": "min read", "keepReading": "Keep reading", "analysisLabel": "ANALYSIS" },
   "footer": {
     "tagline": "Marketing you can apply to your business.",
     "copyright": "© 2026 Diego Guzmán"

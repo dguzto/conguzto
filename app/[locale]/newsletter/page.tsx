@@ -6,9 +6,25 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
+  const isEs = locale === "es";
+  const title = "Newsletter — Con Guzto";
+  const description = isEs ? "Archivo completo de análisis de empresas." : "Full archive of company analyses.";
   return {
-    title: "Newsletter — Con Guzto",
-    description: locale === "es" ? "Archivo completo de análisis de empresas." : "Full archive of company analyses.",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://conguzto.com${isEs ? "" : "/en"}/newsletter`,
+      siteName: "Con Guzto",
+      locale: isEs ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
   };
 }
 

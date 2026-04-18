@@ -4,7 +4,21 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import type { Metadata } from "next";
 import "../globals.css";
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    alternates: {
+      canonical: `https://conguzto.com${locale === "es" ? "" : "/en"}`,
+      languages: {
+        es: "https://conguzto.com",
+        en: "https://conguzto.com/en",
+      },
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

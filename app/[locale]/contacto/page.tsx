@@ -5,9 +5,24 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEs = locale === "es";
+  const title = isEs ? "Contacto — Con Guzto" : "Contact — Con Guzto";
+  const description = isEs ? "Escríbeme para trabajar juntos, colaborar, o preguntar." : "Write to me to work together or collaborate.";
   return {
-    title: isEs ? "Contacto — Con Guzto" : "Contact — Con Guzto",
-    description: isEs ? "Escríbeme para trabajar juntos, colaborar, o preguntar." : "Write to me to work together or collaborate.",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://conguzto.com${isEs ? "" : "/en"}/contacto`,
+      siteName: "Con Guzto",
+      locale: isEs ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description,
+    },
   };
 }
 

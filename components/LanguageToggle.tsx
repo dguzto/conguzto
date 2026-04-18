@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 export function LanguageToggle() {
   const locale = useLocale();
@@ -12,12 +12,8 @@ export function LanguageToggle() {
   const label = targetLocale.toUpperCase();
 
   function switchLocale() {
-    if (locale === "es") {
-      router.push(`/en${pathname}`);
-    } else {
-      const newPath = pathname.replace(/^\/en/, "") || "/";
-      router.push(newPath);
-    }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    router.replace(pathname as any, { locale: targetLocale });
   }
 
   return (
