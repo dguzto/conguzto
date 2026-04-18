@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { LanguageToggle } from "./LanguageToggle";
 import { MobileMenu } from "./MobileMenu";
 
-export function Header() {
-  const t = useTranslations("nav");
+export async function Header() {
+  const t = await getTranslations("nav");
 
   return (
     <header className="sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-sm border-b border-border">

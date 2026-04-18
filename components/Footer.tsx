@@ -1,8 +1,8 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 
-export function Footer() {
-  const t = useTranslations();
+export async function Footer() {
+  const t = await getTranslations();
 
   return (
     <footer className="border-t border-border mt-2xl">

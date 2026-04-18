@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
-import { getLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import { getArticle, getArticles, getArticleSlugs } from "@/lib/content";
 import { MdxContent } from "@/components/MdxContent";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
@@ -27,7 +26,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const article = getArticle(locale, slug);
   if (!article) notFound();
 
-  const t = useTranslations("article");
+  const t = await getTranslations("article");
   const otherArticles = getArticles(locale).filter((a) => a.slug !== slug).slice(0, 2);
 
   return (

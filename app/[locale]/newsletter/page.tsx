@@ -1,5 +1,4 @@
-import { useTranslations } from "next-intl";
-import { getLocale } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { ArticleCard } from "@/components/ArticleCard";
 import { getArticles } from "@/lib/content";
@@ -15,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function NewsletterPage() {
   const locale = await getLocale();
-  const t = useTranslations("newsletter");
+  const t = await getTranslations("newsletter");
   const articles = getArticles(locale);
 
   return (

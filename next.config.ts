@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/*": ["./content/**/*"],
   },
+  turbopack: {
+    root: ".",
+  },
 };
 
 export default withNextIntl(nextConfig);

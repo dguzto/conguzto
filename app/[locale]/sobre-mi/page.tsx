@@ -1,5 +1,4 @@
-import { useTranslations } from "next-intl";
-import { getLocale } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import type { Metadata } from "next";
 
@@ -12,8 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function AboutPage() {
-  const t = useTranslations();
+export default async function AboutPage() {
+  const t = await getTranslations();
   return (
     <div className="bg-bg-primary min-h-screen">
       <section className="py-3xl px-xl">
