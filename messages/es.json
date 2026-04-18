@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "newsletter": "Newsletter",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "home": {
+    "headline": "Aprende marketing analizando empresas que ya crecieron.",
+    "subtitle": "Por Diego Guzmán · Construyo y analizo negocios que crecen.",
+    "description": "Cada semana elijo una empresa, analizo su marketing con datos públicos y te cuento qué haría yo para hacerla crecer. Lo que funciona, lo que no, y por dónde empezaría.",
+    "latestLabel": "Últimos análisis"
+  },
+  "newsletter": {
+    "title": "Así haría crecer...",
+    "subtitle": "Cada edición analiza una empresa en profundidad y propone un plan de crecimiento basado en datos públicos. Qué está haciendo bien, dónde están las oportunidades, y por dónde empezar."
+  },
+  "signup": {
+    "placeholder": "tu@email.com",
+    "button": "Suscribirme",
+    "success": "¡Suscrito! Revisa tu email.",
+    "error": "Algo falló. Intenta de nuevo."
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿En qué puedo ayudarte?",
+    "name": "Tu nombre",
+    "email": "Tu email",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "success": "Mensaje enviado. Te respondo pronto.",
+    "error": "No se pudo enviar. Intenta de nuevo.",
+    "selectIntent": "¿Sobre qué me escribes?",
+    "intents": {
+      "work": "Quiero trabajar contigo",
+      "workContext": "He liderado marketing en startups, dirigido agencias y lanzado productos. Cuéntame sobre tu empresa y qué necesitas.",
+      "contentCollab": "Colaboración: contenido",
+      "contentCollabContext": "Escribo sobre growth y marketing. Si quieres co-crear algo, cuéntame la idea.",
+      "podcastCollab": "Colaboración: podcast/evento",
+      "podcastCollabContext": "Abierto a conversaciones interesantes. ¿De qué hablaríamos?",
+      "otherCollab": "Colaboración: otra",
+      "otherCollabContext": "Cuéntame qué tienes en mente.",
+      "articleQuestion": "Pregunta sobre un artículo",
+      "articleQuestionContext": "¿Cuál artículo y qué te generó la duda?",
+      "other": "Otra cosa"
+    },
+    "directEmail": "O escríbeme directamente a"
+  },
+  "about": { "title": "Diego Guzmán" },
+  "article": { "readTime": "min de lectura", "keepReading": "Sigue leyendo" },
+  "footer": {
+    "tagline": "Marketing que puedes aplicar a tu negocio.",
+    "copyright": "© 2026 Diego Guzmán"
+  }
+}

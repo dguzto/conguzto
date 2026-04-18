@@ -1,8 +1,7 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
 
 @theme inline {
-  /* Colors */
   --color-bg-primary: #FAFAF8;
   --color-bg-white: #FFFFFF;
   --color-text-primary: #1A1A1A;
@@ -12,10 +11,8 @@
   --color-border: #EEEEEE;
   --color-border-input: #D4D4D4;
 
-  /* Font family */
   --font-sans: 'Inter', system-ui, sans-serif;
 
-  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -24,22 +21,13 @@
   --spacing-2xl: 48px;
   --spacing-3xl: 72px;
 
-  /* Border radius */
   --radius-button: 8px;
   --radius-card: 10px;
   --radius-input: 8px;
   --radius-image: 12px;
 
-  /* Max width */
-  --container-layout: 1120px;
-  --container-article: 680px;
-  --container-form: 520px;
-  --container-signup: 420px;
-
-  /* Box shadow */
   --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
 
-  /* Letter spacing */
   --tracking-tight-h1: -0.8px;
   --tracking-tight-h2: -0.5px;
   --tracking-tight-h3: -0.3px;
@@ -52,7 +40,7 @@ html {
 }
 
 body {
-  background-color: #FAFAF8;
-  color: #1A1A1A;
-  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
 }
