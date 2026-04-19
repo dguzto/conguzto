@@ -48,9 +48,8 @@
   "about": {
     "title": "Diego Guzmán",
     "tagline": "I build and analyze growing businesses.",
-    "bio1": "Today I'm CMO at Mentorhood, co-founder of Good People (a marketing agency), and I write this newsletter where I analyze how companies grow.",
-    "bio2": "Before this I worked in marketing roles at B2B startups, business consulting, and a master's degree that taught me more about what I didn't want to do than what I did.",
-    "bio3": "What drives me is understanding why some companies grow and others don't. Not from theory — from operating, making mistakes, and trying again."
+    "bio1": "Today I lead marketing at Mentorhood and co-founded Good People, a marketing agency. Every week I pick a company, analyze its marketing with public data, and write what I'd do to grow it. The kind of analysis I wish I'd had when I started.",
+    "bio2": "If you want to understand how companies grow without relying on empty frameworks or infinite budgets, this is for you."
   },
   "article": { "readTime": "min read", "keepReading": "Keep reading", "analysisLabel": "ANALYSIS" },
   "footer": {
