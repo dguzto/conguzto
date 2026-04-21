@@ -31,7 +31,7 @@ export function ContactForm() {
 
   if (status === "success") return <p className="text-accent text-[14px] font-medium">{t("success")}</p>;
 
-  const inputClass = "w-full bg-bg-white border border-border-input rounded-input px-md py-[14px] text-[14px] text-text-primary outline-none focus:border-accent transition-colors";
+  const inputClass = "w-full bg-bg-white border border-border-input rounded-input px-md py-[14px] text-[14px] text-text-primary outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-md">
@@ -59,7 +59,7 @@ export function ContactForm() {
         <label className="block text-[14px] text-text-secondary mb-sm">{t("message")}</label>
         <textarea value={message} onChange={(e) => setMessage(e.target.value)} required rows={4} className={`${inputClass} resize-y`} />
       </div>
-      <button type="submit" disabled={status === "loading"} className="bg-text-primary text-white rounded-button px-lg py-[14px] text-[14px] font-medium hover:opacity-90 transition-opacity disabled:opacity-60">
+      <button type="submit" disabled={status === "loading"} className="bg-text-primary text-white rounded-button px-lg py-[14px] text-[14px] font-medium hover:opacity-90 transition-opacity disabled:opacity-60 focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
         {status === "loading" ? "..." : t("send")}
       </button>
       {status === "error" && <p className="text-red-500 text-xs">{t("error")}</p>}

@@ -9,7 +9,7 @@ export async function sendContactEmail({ name, email, intent, message }: {
 }) {
   const contactEmail = process.env.CONTACT_EMAIL || "diego@conguzto.com";
   return getResend().emails.send({
-    from: "Con Guzto <noreply@conguzto.com>",
+    from: "CGT <noreply@conguzto.com>",
     to: contactEmail,
     replyTo: email,
     subject: `[conguzto.com] ${intent} — ${name}`,

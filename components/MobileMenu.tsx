@@ -24,16 +24,14 @@ export function MobileMenu() {
           )}
         </svg>
       </button>
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-bg-primary border-b border-border px-xl py-lg">
-          <nav className="flex flex-col gap-lg">
-            <Link href="/newsletter" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px]">{t("newsletter")}</Link>
-            <Link href="/sobre-mi" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px]">{t("about")}</Link>
-            <Link href="/contacto" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px]">{t("contact")}</Link>
-            <LanguageToggle />
-          </nav>
-        </div>
-      )}
+      <div className={`absolute top-full left-0 right-0 bg-bg-primary border-b border-border px-xl overflow-hidden transition-all duration-200 ease-out ${isOpen ? "max-h-[300px] py-lg opacity-100" : "max-h-0 py-0 opacity-0 border-b-0"}`}>
+        <nav className="flex flex-col gap-lg">
+          <Link href="/newsletter" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px] transition-colors">{t("newsletter")}</Link>
+          <Link href="/sobre-mi" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px] transition-colors">{t("about")}</Link>
+          <Link href="/contacto" onClick={() => setIsOpen(false)} className="text-text-secondary hover:text-text-primary text-[15px] transition-colors">{t("contact")}</Link>
+          <LanguageToggle />
+        </nav>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEs = locale === "es";
-  const title = isEs ? "Sobre mí — Con Guzto" : "About — Con Guzto";
+  const title = isEs ? "Sobre mí — CGT" : "About — CGT";
   const description = isEs ? "Diego Guzmán. Construyo y analizo negocios que crecen." : "Diego Guzmán. I build and analyze growing businesses.";
   return {
     title,
@@ -14,14 +14,16 @@ export async function generateMetadata(): Promise<Metadata> {
       title,
       description,
       url: `https://conguzto.com${isEs ? "" : "/en"}/sobre-mi`,
-      siteName: "Con Guzto",
+      siteName: "CGT",
       locale: isEs ? "es_ES" : "en_US",
       type: "website",
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "CGT" }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
+      images: ["/og.png"],
     },
   };
 }
@@ -34,7 +36,7 @@ export default async function AboutPage() {
         <div className="max-w-[680px] mx-auto">
           <div className="mb-2xl">
             <img src="/diego.jpg" alt="Diego Guzmán" className="w-[200px] h-[200px] object-cover rounded-image mb-lg" />
-            <h1 className="text-[30px] font-bold text-text-primary tracking-[--tracking-tight-h1] leading-[1.2]">{t("about.title")}</h1>
+            <h1 className="font-heading text-[36px] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{t("about.title")}</h1>
           </div>
           <div className="space-y-md text-[16px] text-text-secondary leading-[1.7]">
             <p>{t("about.bio1")}</p>

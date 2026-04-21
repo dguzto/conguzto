@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 const components = {
-  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => <h2 className="text-[24px] font-bold text-text-primary tracking-[--tracking-tight-h2] mt-2xl mb-md leading-[1.2]" {...props} />,
+  h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => <h2 className="font-heading text-[24px] font-bold text-text-primary tracking-[-0.5px] mt-2xl mb-md leading-[1.2]" {...props} />,
   h3: (props: React.HTMLAttributes<HTMLHeadingElement>) => <h3 className="text-[18px] font-semibold text-text-primary tracking-[--tracking-tight-h3] mt-xl mb-sm leading-[1.3]" {...props} />,
   p: (props: React.HTMLAttributes<HTMLParagraphElement>) => <p className="text-[16px] text-text-secondary leading-[1.7] mb-md" {...props} />,
   ul: (props: React.HTMLAttributes<HTMLUListElement>) => <ul className="text-[16px] text-text-secondary leading-[1.7] mb-md list-disc pl-lg" {...props} />,

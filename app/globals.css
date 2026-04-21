@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme inline {
@@ -6,12 +5,14 @@
   --color-bg-white: #FFFFFF;
   --color-text-primary: #1A1A1A;
   --color-text-secondary: #666666;
-  --color-text-muted: #999999;
+  --color-text-muted: #767676;
   --color-accent: #C4703E;
   --color-border: #EEEEEE;
   --color-border-input: #D4D4D4;
 
   --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+  --font-logo: 'Sora', system-ui, sans-serif;
 
   --spacing-xs: 4px;
   --spacing-sm: 8px;

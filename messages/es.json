@@ -12,7 +12,8 @@
   },
   "newsletter": {
     "title": "Así haría crecer...",
-    "subtitle": "Cada edición analiza una empresa en profundidad y propone un plan de crecimiento basado en datos públicos. Qué está haciendo bien, dónde están las oportunidades, y por dónde empezar."
+    "subtitle": "Cada edición analiza una empresa en profundidad y propone un plan de crecimiento basado en datos públicos. Qué está haciendo bien, dónde están las oportunidades, y por dónde empezar.",
+    "archive": "Archivo"
   },
   "signup": {
     "placeholder": "tu@email.com",
@@ -29,10 +30,10 @@
     "send": "Enviar",
     "success": "Mensaje enviado. Te respondo pronto.",
     "error": "No se pudo enviar. Intenta de nuevo.",
-    "selectIntent": "¿Sobre qué me escribes?",
+    "selectIntent": "¿Qué te trae por aquí?",
     "intents": {
-      "work": "Quiero trabajar contigo",
-      "workContext": "He liderado marketing en startups, dirigido agencias y lanzado productos. Cuéntame sobre tu empresa y qué necesitas.",
+      "work": "Quiero hacer crecer mi negocio",
+      "workContext": "Cuéntame sobre tu proyecto y cómo crees que puedo apoyarte.",
       "contentCollab": "Colaboración: contenido",
       "contentCollabContext": "Escribo sobre growth y marketing. Si quieres co-crear algo, cuéntame la idea.",
       "podcastCollab": "Colaboración: podcast/evento",
@@ -54,6 +55,7 @@
   "article": { "readTime": "min de lectura", "keepReading": "Sigue leyendo", "analysisLabel": "ANÁLISIS" },
   "footer": {
     "tagline": "Marketing que puedes aplicar a tu negocio.",
+    "cta": "¿Quieres el próximo análisis en tu inbox?",
     "copyright": "© 2026 Diego Guzmán"
   }
 }

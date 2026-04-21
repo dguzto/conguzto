@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { subscribeEmail } from "@/lib/buttondown";
+import { subscribeEmail } from "@/lib/kit";
 
 export async function POST(request: NextRequest) {
   const body = await request.json();

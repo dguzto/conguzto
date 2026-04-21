@@ -26,8 +26,9 @@ export function NewsletterSignup() {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-[420px] mx-auto">
       <div className="flex flex-col sm:flex-row gap-sm">
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("placeholder")} required className="flex-1 bg-bg-white border border-border-input rounded-input px-md py-[14px] text-[14px] text-text-primary placeholder:text-text-muted outline-none focus:border-accent transition-colors" />
-        <button type="submit" disabled={status === "loading"} className="bg-text-primary text-white rounded-button px-lg py-[14px] text-[14px] font-medium hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap">
+        <label htmlFor="newsletter-email" className="sr-only">{t("placeholder")}</label>
+        <input id="newsletter-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder={t("placeholder")} required className="flex-1 bg-bg-white border border-border-input rounded-input px-md py-[14px] text-[14px] text-text-primary placeholder:text-text-muted outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:border-accent transition-colors" />
+        <button type="submit" disabled={status === "loading"} className="bg-text-primary text-white rounded-button px-lg py-[14px] text-[14px] font-medium hover:opacity-90 transition-opacity disabled:opacity-60 whitespace-nowrap focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2">
           {status === "loading" ? "..." : t("button")}
         </button>
       </div>

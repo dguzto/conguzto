@@ -1,11 +1,33 @@
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Inter, Space_Grotesk, Sora } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
 import "../globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-sans",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: "700",
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-logo",
+});
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -42,8 +64,8 @@ export default async function LocaleLayout({
   };
 
   return (
-    <html lang={locale}>
-      <body className="bg-bg-primary">
+    <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
+      <body className="bg-bg-primary font-sans">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <NextIntlClientProvider messages={messages}>
           <Header />

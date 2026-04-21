@@ -12,7 +12,8 @@
   },
   "newsletter": {
     "title": "How I'd grow...",
-    "subtitle": "Each edition analyzes a company in depth and proposes a growth plan based on public data. What's working, where the opportunities are, and where to start."
+    "subtitle": "Each edition analyzes a company in depth and proposes a growth plan based on public data. What's working, where the opportunities are, and where to start.",
+    "archive": "Archive"
   },
   "signup": {
     "placeholder": "you@email.com",
@@ -29,10 +30,10 @@
     "send": "Send",
     "success": "Message sent. I'll get back to you soon.",
     "error": "Could not send. Try again.",
-    "selectIntent": "What's this about?",
+    "selectIntent": "What brings you here?",
     "intents": {
-      "work": "I want to work with you",
-      "workContext": "I've led marketing at startups, run agencies, and launched products. Tell me about your company and what you need.",
+      "work": "I want to grow my business",
+      "workContext": "Tell me about your project and how you think I can help.",
       "contentCollab": "Collaboration: content",
       "contentCollabContext": "I write about growth and marketing. If you want to co-create something, tell me the idea.",
       "podcastCollab": "Collaboration: podcast/event",
@@ -54,6 +55,7 @@
   "article": { "readTime": "min read", "keepReading": "Keep reading", "analysisLabel": "ANALYSIS" },
   "footer": {
     "tagline": "Marketing you can apply to your business.",
+    "cta": "Want the next analysis in your inbox?",
     "copyright": "© 2026 Diego Guzmán"
   }
 }

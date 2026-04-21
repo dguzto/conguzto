@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getArticle(locale, slug);
   if (!article) return { title: "Not Found" };
-  const title = `${article.title} — Con Guzto`;
+  const title = `${article.title} — CGT`;
   const description = article.subtitle;
   return {
     title,
@@ -27,15 +27,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title,
       description,
       url: `https://conguzto.com${isEs ? "" : "/en"}/newsletter/${slug}`,
-      siteName: "Con Guzto",
+      siteName: "CGT",
       locale: isEs ? "es_ES" : "en_US",
       type: "article",
       publishedTime: article.date,
+      images: [{ url: "/og.png", width: 1200, height: 630, alt: "CGT" }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description,
+      images: ["/og.png"],
     },
   };
 }
@@ -72,7 +74,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <section className="pt-3xl px-xl">
         <div className="max-w-[680px] mx-auto">
           <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("analysisLabel")} #{String(article.number).padStart(2, "0")}</p>
-          <h1 className="text-[30px] font-bold text-text-primary tracking-[--tracking-tight-h1] leading-[1.2]">{article.title}</h1>
+          <h1 className="font-heading text-[36px] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{article.title}</h1>
           <p className="text-[15px] text-text-secondary mt-md leading-[1.6]">{article.subtitle}</p>
           <p className="text-xs text-text-muted mt-md">{article.readingTime} {t("readTime")} · {new Date(article.date).toLocaleDateString(locale === "es" ? "es-ES" : "en-US", { month: "long", year: "numeric" })}</p>
         </div>
