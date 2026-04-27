@@ -49,8 +49,11 @@
   "about": {
     "title": "Diego Guzmán",
     "tagline": "I build and analyze growing businesses.",
-    "bio1": "Today I lead marketing at Mentorhood and co-founded Good People, a marketing agency. Every week I pick a company, analyze its marketing with public data, and write what I'd do to grow it. The kind of analysis I wish I'd had when I started.",
-    "bio2": "If you want to understand how companies grow without relying on empty frameworks or infinite budgets, this is for you."
+    "bio1": "I grew up in Costa Rica surrounded by businesses where they know you by name. Small shops, shoe stores and restaurants where you can see the effort in everything they do. Before studying marketing, I knew I wanted to help people create value. I moved to Madrid to pursue a master's that would help me connect traditional businesses with customers who don't know them yet.",
+    "bio2": "In Madrid I discovered growth marketing. Growth is finding the smartest way to grow a business with what it already has. It's where marketing, data and business decisions meet. It's what I look for in every project.",
+    "bio3": "Today I lead marketing at Mentorhood. Through Good People, a boutique B2B agency in Madrid, I help companies that want to grow. Every week I pick a company and analyze it: what they communicate, what their customers say, what they promise and what they deliver. I find where the opportunities are and design a system to grow with what they already have.",
+    "bio4": "If you have a business with something good to offer and want to grow it, we do it here ",
+    "bio4Link": "con guzto."
   },
   "article": { "readTime": "min read", "keepReading": "Keep reading", "analysisLabel": "ANALYSIS" },
   "footer": {

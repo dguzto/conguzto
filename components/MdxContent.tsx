@@ -8,6 +8,7 @@ const components = {
   ol: (props: React.HTMLAttributes<HTMLOListElement>) => <ol className="text-[16px] text-text-secondary leading-[1.7] mb-md list-decimal pl-lg" {...props} />,
   li: (props: React.HTMLAttributes<HTMLLIElement>) => <li className="mb-sm" {...props} />,
   blockquote: (props: React.HTMLAttributes<HTMLQuoteElement>) => <blockquote className="border-l-2 border-accent pl-lg text-text-secondary italic mb-md" {...props} />,
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => <img className="w-full rounded-image my-lg" {...props} />,
   strong: (props: React.HTMLAttributes<HTMLElement>) => <strong className="text-text-primary font-semibold" {...props} />,
   em: (props: React.HTMLAttributes<HTMLElement>) => <em className="italic" {...props} />,
 };
