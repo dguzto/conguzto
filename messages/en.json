@@ -5,9 +5,9 @@
     "contact": "Contact"
   },
   "home": {
-    "headline": "Learn marketing by analyzing companies that already grew.",
-    "subtitle": "By Diego Guzmán · I build and analyze growing businesses.",
-    "description": "Every week I pick a company, analyze its marketing with public data, and tell you what I'd do to grow it. What works, what doesn't, and where I'd start.",
+    "headline": "One company per week: what it does well, what I'd do differently, and a growth loop to scale.",
+    "subtitle": "By Diego Guzmán · I analyze growing businesses and write what I find.",
+    "description": "I research how they make money, how they stand out from the competition, and what levers they have to grow.",
     "latestLabel": "Latest analyses"
   },
   "newsletter": {
