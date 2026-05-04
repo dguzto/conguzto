@@ -17,90 +17,72 @@ export async function GET(req: NextRequest) {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "#1A1A1A",
+          backgroundColor: "#FAFAF8",
+          padding: "48px 64px",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <div
+        <span
           style={{
-            width: "100%",
-            height: "8px",
-            backgroundColor: "#C4703E",
+            fontSize: "24px",
+            fontWeight: 700,
+            color: "#C4703E",
+            textTransform: "uppercase",
+            letterSpacing: "5px",
+            marginBottom: "28px",
           }}
-        />
+        >
+          #{String(number).padStart(2, "0")}
+          {industry ? ` · ${industry}` : ""}
+        </span>
+        <h1
+          style={{
+            fontSize: "80px",
+            fontWeight: 800,
+            color: "#1A1A1A",
+            lineHeight: 1.1,
+            letterSpacing: "-3px",
+            textAlign: "center",
+            margin: 0,
+          }}
+        >
+          {title}
+        </h1>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            flex: 1,
-            padding: "40px 80px",
-            textAlign: "center",
+            gap: "10px",
+            marginTop: "36px",
           }}
         >
+          <div
+            style={{
+              width: "36px",
+              height: "36px",
+              borderRadius: "50%",
+              backgroundColor: "#C4703E",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "white",
+              fontSize: "16px",
+              fontWeight: 700,
+            }}
+          >
+            C
+          </div>
           <span
             style={{
-              fontSize: "20px",
-              fontWeight: 600,
-              color: "#C4703E",
-              textTransform: "uppercase",
-              letterSpacing: "4px",
-              marginBottom: "24px",
-            }}
-          >
-            ANALYSIS #{String(number).padStart(2, "0")}
-            {industry ? ` · ${industry}` : ""}
-          </span>
-          <h1
-            style={{
-              fontSize: "68px",
+              fontSize: "22px",
               fontWeight: 700,
-              color: "#FAFAF8",
-              lineHeight: 1.15,
-              letterSpacing: "-2px",
-              textAlign: "center",
+              color: "#1A1A1A",
             }}
           >
-            {title}
-          </h1>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "0 80px 36px",
-          }}
-        >
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <div
-              style={{
-                width: "40px",
-                height: "40px",
-                borderRadius: "50%",
-                backgroundColor: "#C4703E",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "white",
-                fontSize: "18px",
-                fontWeight: 700,
-              }}
-            >
-              C
-            </div>
-            <span
-              style={{
-                fontSize: "22px",
-                fontWeight: 700,
-                color: "#FAFAF8",
-                letterSpacing: "-0.5px",
-              }}
-            >
-              CGT
-            </span>
-          </div>
-          <span style={{ fontSize: "18px", color: "#555" }}>
+            CGT
+          </span>
+          <span style={{ fontSize: "20px", color: "#999", marginLeft: "8px" }}>
             conguzto.com
           </span>
         </div>
