@@ -24,15 +24,15 @@ export async function GET(req: NextRequest) {
       >
         <div
           style={{
-            width: "160px",
-            height: "160px",
+            width: "320px",
+            height: "320px",
             borderRadius: "50%",
             backgroundColor: "#C4703E",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             color: "white",
-            fontSize: "80px",
+            fontSize: "160px",
             fontWeight: 700,
           }}
         >
@@ -40,27 +40,27 @@ export async function GET(req: NextRequest) {
         </div>
         <span
           style={{
-            fontSize: "72px",
+            fontSize: "144px",
             fontWeight: 800,
             color: "#1A1A1A",
-            letterSpacing: "-2px",
-            marginTop: "32px",
+            letterSpacing: "-4px",
+            marginTop: "64px",
           }}
         >
           CGT
         </span>
         <span
           style={{
-            fontSize: "24px",
+            fontSize: "48px",
             color: "#999",
-            marginTop: "12px",
-            letterSpacing: "2px",
+            marginTop: "24px",
+            letterSpacing: "4px",
           }}
         >
           conguzto.com
         </span>
       </div>
     ),
-    { width: 1200, height: 630 },
+    { width: 2400, height: 1260 },
   );
 }
