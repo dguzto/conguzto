@@ -1,7 +1,9 @@
 import { Link } from "@/i18n/navigation";
+import { getTranslations } from "next-intl/server";
 import type { ArticleMeta } from "@/lib/content";
 
-export function ArticleCard({ article, featured = false, listItem = false, lastItem = false }: { article: ArticleMeta; featured?: boolean; listItem?: boolean; lastItem?: boolean }) {
+export async function ArticleCard({ article, featured = false, listItem = false, lastItem = false }: { article: ArticleMeta; featured?: boolean; listItem?: boolean; lastItem?: boolean }) {
+  const t = await getTranslations("article");
   if (featured) {
     return (
       <Link
@@ -17,7 +19,7 @@ export function ArticleCard({ article, featured = false, listItem = false, lastI
         {article.subtitle && (
           <p className="text-[15px] text-text-secondary mt-sm leading-[1.6]">{article.subtitle}</p>
         )}
-        <p className="text-[13px] text-accent mt-lg">Leer análisis →</p>
+        <p className="text-[13px] text-accent mt-lg">{t("readAnalysis")}</p>
       </Link>
     );
   }

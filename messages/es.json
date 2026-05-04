@@ -55,7 +55,7 @@
     "bio4": "Si tienes un negocio con algo bueno que ofrecer y quieres hacerlo crecer, aquí lo hacemos ",
     "bio4Link": "con guzto."
   },
-  "article": { "readTime": "min de lectura", "keepReading": "Sigue leyendo", "analysisLabel": "ANÁLISIS" },
+  "article": { "readTime": "min de lectura", "keepReading": "Sigue leyendo", "analysisLabel": "ANÁLISIS", "readAnalysis": "Leer análisis →" },
   "footer": {
     "tagline": "Marketing que puedes aplicar a tu negocio.",
     "cta": "¿Quieres el próximo análisis en tu inbox?",
