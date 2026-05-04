@@ -1,0 +1,35 @@
+<svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="420" fill="#FAFAF8" rx="12"/>
+  <text x="260" y="32" text-anchor="middle" font-family="Inter, system-ui" font-size="13" font-weight="600" fill="#C4703E" letter-spacing="1.5">SPENDING BENCHMARKS LOOP</text>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#C4703E"/>
+    </marker>
+  </defs>
+  <rect x="155" y="50" width="210" height="52" rx="8" fill="#1A1A1A"/>
+  <text x="260" y="72" text-anchor="middle" font-family="Inter, system-ui" font-size="12" font-weight="600" fill="#FAFAF8">Payhawk procesa gasto</text>
+  <text x="260" y="90" text-anchor="middle" font-family="Inter, system-ui" font-size="10" fill="#999">$3.2B en volumen de pagos</text>
+  <path d="M365 76 L440 76 L440 145" stroke="#C4703E" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="450" y="115" font-family="Inter, system-ui" font-size="9" fill="#888">data anónima</text>
+  <rect x="310" y="145" width="210" height="52" rx="8" fill="white" stroke="#e5e5e3" stroke-width="1.5"/>
+  <text x="415" y="167" text-anchor="middle" font-family="Inter, system-ui" font-size="12" font-weight="600" fill="#1A1A1A">Publica benchmarks</text>
+  <text x="415" y="185" text-anchor="middle" font-family="Inter, system-ui" font-size="10" fill="#888">por industria, tamaño, país</text>
+  <path d="M415 197 L415 245" stroke="#C4703E" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="425" y="225" font-family="Inter, system-ui" font-size="9" fill="#888">SEO + LinkedIn</text>
+  <rect x="290" y="245" width="250" height="52" rx="8" fill="white" stroke="#e5e5e3" stroke-width="1.5"/>
+  <text x="415" y="267" text-anchor="middle" font-family="Inter, system-ui" font-size="12" font-weight="600" fill="#1A1A1A">Finance controller encuentra</text>
+  <text x="415" y="285" text-anchor="middle" font-family="Inter, system-ui" font-size="10" fill="#888">buscando datos para su presupuesto</text>
+  <path d="M290 275 L140 275 L140 245" stroke="#C4703E" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="200" y="265" font-family="Inter, system-ui" font-size="9" fill="#888">descarga reporte = lead</text>
+  <rect x="30" y="190" width="220" height="52" rx="8" fill="white" stroke="#e5e5e3" stroke-width="1.5"/>
+  <text x="140" y="212" text-anchor="middle" font-family="Inter, system-ui" font-size="12" font-weight="600" fill="#1A1A1A">Descubre Payhawk</text>
+  <text x="140" y="230" text-anchor="middle" font-family="Inter, system-ui" font-size="10" fill="#C4703E">se registra como cliente</text>
+  <path d="M140 190 L140 130 L155 100" stroke="#C4703E" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <text x="60" y="158" font-family="Inter, system-ui" font-size="9" fill="#888">más data = mejor loop</text>
+  <rect x="145" y="340" width="230" height="36" rx="18" fill="#C4703E"/>
+  <text x="260" y="363" text-anchor="middle" font-family="Inter, system-ui" font-size="11" font-weight="600" fill="white">Moat crece con cada cliente</text>
+  <text x="260" y="390" text-anchor="middle" font-family="Inter, system-ui" font-size="9" fill="#888">más empresas = mejores benchmarks = más difícil de copiar</text>
+  <rect x="30" y="340" width="100" height="30" rx="6" fill="#f5f0eb" stroke="#e5e5e3" stroke-width="1"/>
+  <text x="80" y="358" text-anchor="middle" font-family="Inter, system-ui" font-size="9" fill="#888">Ramp lo hace en US</text>
+  <text x="80" y="370" text-anchor="middle" font-family="Inter, system-ui" font-size="9" fill="#C4703E">Europa = vacío</text>
+</svg>
