@@ -7,9 +7,12 @@ export interface ArticleMeta {
   slug: string;
   title: string;
   subtitle: string;
+  metaDescription: string;
+  keywords: string[];
   industry: string;
   country: string;
   date: string;
+  dateModified: string;
   readingTime: string;
   number: number;
 }
@@ -36,9 +39,12 @@ export function getArticles(locale: string): ArticleMeta[] {
       slug,
       title: data.title ?? "",
       subtitle: data.subtitle ?? "",
+      metaDescription: data.metaDescription ?? data.subtitle ?? "",
+      keywords: data.keywords ?? [],
       industry: data.industry ?? "",
       country: data.country ?? "",
       date: data.date ?? "",
+      dateModified: data.dateModified ?? data.date ?? "",
       readingTime: `${Math.max(1, Math.ceil(rt.minutes))}`,
       number: data.number ?? 0,
     };
@@ -61,9 +67,12 @@ export function getArticle(locale: string, slug: string): Article | null {
     slug,
     title: data.title ?? "",
     subtitle: data.subtitle ?? "",
+    metaDescription: data.metaDescription ?? data.subtitle ?? "",
+    keywords: data.keywords ?? [],
     industry: data.industry ?? "",
     country: data.country ?? "",
     date: data.date ?? "",
+    dateModified: data.dateModified ?? data.date ?? "",
     readingTime: `${Math.max(1, Math.ceil(rt.minutes))}`,
     number: data.number ?? 0,
     content,

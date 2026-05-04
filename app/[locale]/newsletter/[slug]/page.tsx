@@ -19,10 +19,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = getArticle(locale, slug);
   if (!article) return { title: "Not Found" };
   const title = `${article.title} — CGT`;
-  const description = article.subtitle;
+  const description = article.metaDescription;
+  const ogImage = `/api/og?title=${encodeURIComponent(article.title)}&industry=${encodeURIComponent(article.industry)}&number=${article.number}`;
   return {
     title,
     description,
+    keywords: article.keywords,
+    alternates: {
+      canonical: `https://conguzto.com${isEs ? "" : "/en"}/newsletter/${slug}`,
+      languages: {
+        es: `https://conguzto.com/es/newsletter/${slug}`,
+        en: `https://conguzto.com/en/newsletter/${slug}`,
+      },
+    },
     openGraph: {
       title,
       description,
@@ -31,13 +40,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       locale: isEs ? "es_ES" : "en_US",
       type: "article",
       publishedTime: article.date,
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "CGT" }],
+      modifiedTime: article.dateModified,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: article.title }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: ["/og.png"],
+      images: [ogImage],
     },
   };
 }
@@ -55,8 +65,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
-    description: article.subtitle,
+    description: article.metaDescription,
     datePublished: article.date,
+    dateModified: article.dateModified,
     author: {
       "@type": "Person",
       name: "Diego Guzmán",
@@ -66,6 +77,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       "@type": "Person",
       name: "Diego Guzmán",
     },
+    keywords: article.keywords.join(", "),
   };
 
   return (
