@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const isEs = locale === "es";
-  const title = isEs ? "Sobre mí — CGT" : "About — CGT";
+  const title = isEs ? "Sobre mí · CGT" : "About · CGT";
   const description = isEs ? "Diego Guzmán. Construyo y analizo negocios que crecen." : "Diego Guzmán. I build and analyze growing businesses.";
   return {
     title,

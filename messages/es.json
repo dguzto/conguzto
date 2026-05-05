@@ -5,10 +5,16 @@
     "contact": "Contacto"
   },
   "home": {
-    "headline": "Analizo empresas que crecen y comparto growth loops que puedes replicar.",
+    "headline": "Una empresa. Un análisis. Un growth loop que puedes copiar.",
     "subtitle": "Por Diego Guzmán · Curiosidad y negocio.",
-    "description": "Una empresa por semana: lo que hace bien, lo que haría diferente y un growth loop para escalar.",
-    "latestLabel": "Últimos análisis"
+    "description": "Cada semana analizo una empresa que crece. Qué funciona, qué no, y qué puedes copiar.",
+    "latestLabel": "Últimos análisis",
+    "split1Title": "Todo está en su web. Ellos no lo ven.",
+    "split1Text": "Cada análisis parte de lo que cualquiera puede ver. Web, pricing, reviews, ofertas de empleo. Y encuentra el motor de crecimiento debajo.",
+    "split2Title": "Léelo. Ejecútalo.",
+    "split2Text": "Cada análisis termina con un growth loop. Una jugada específica y repetible que puedes adaptar a tu producto, tu mercado, tu presupuesto.",
+    "ctaTitle": "Así haría crecer tu negocio",
+    "ctaText": "Un email por semana. Una empresa analizada. Cero spam."
   },
   "newsletter": {
     "title": "Así haría crecer...",

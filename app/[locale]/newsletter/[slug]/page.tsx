@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = getArticle(locale, slug);
   if (!article) return { title: "Not Found" };
-  const title = `${article.title} — CGT`;
+  const title = `${article.title} · CGT`;
   const description = article.metaDescription;
   const ogImage = `/api/og?title=${encodeURIComponent(article.title)}&industry=${encodeURIComponent(article.industry)}&number=${article.number}`;
   return {

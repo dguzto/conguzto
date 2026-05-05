@@ -38,7 +38,7 @@ export function ContactForm() {
       <div>
         <label className="block text-[14px] text-text-secondary mb-sm">{t("selectIntent")}</label>
         <select value={intent} onChange={(e) => setIntent(e.target.value as Intent)} required className={inputClass}>
-          <option value="" disabled>—</option>
+          <option value="" disabled>···</option>
           {INTENTS.map((key) => <option key={key} value={key}>{t(`intents.${key}`)}</option>)}
         </select>
       </div>

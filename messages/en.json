@@ -5,10 +5,16 @@
     "contact": "Contact"
   },
   "home": {
-    "headline": "I analyze growing companies and share growth loops you can replicate.",
+    "headline": "One company. One breakdown. One growth loop you can steal.",
     "subtitle": "By Diego Guzmán · Curiosity and business.",
-    "description": "One company per week: what it does well, what I'd do differently, and a growth loop to scale.",
-    "latestLabel": "Latest analyses"
+    "description": "Every week I break down a growing company. What works, what doesn't, and what you can copy.",
+    "latestLabel": "Latest analyses",
+    "split1Title": "Everything is on their website. They just can't see it.",
+    "split1Text": "Every analysis starts from what anyone can see. Website, pricing, reviews, job posts. Then finds the growth engine underneath.",
+    "split2Title": "Read it. Run it.",
+    "split2Text": "Each breakdown ends with a growth loop. A specific, repeatable play you can adapt to your product, your market, your budget.",
+    "ctaTitle": "How I'd grow your business",
+    "ctaText": "One email a week. One company breakdown. Zero spam."
   },
   "newsletter": {
     "title": "How I'd grow...",

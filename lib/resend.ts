@@ -12,7 +12,7 @@ export async function sendContactEmail({ name, email, intent, message }: {
     from: "CGT <noreply@conguzto.com>",
     to: contactEmail,
     replyTo: email,
-    subject: `[conguzto.com] ${intent} — ${name}`,
+    subject: `[conguzto.com] ${intent} · ${name}`,
     text: `Nombre: ${name}\nEmail: ${email}\nIntención: ${intent}\n\nMensaje:\n${message}`,
   });
 }
