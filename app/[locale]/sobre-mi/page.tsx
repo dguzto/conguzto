@@ -51,8 +51,8 @@ export default async function AboutPage() {
           </div>
           <FadeIn delay={600}>
             <div className="flex gap-md mt-xl">
-              <a href="https://linkedin.com/in/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>
-              <a href="https://x.com/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">X</a>
+              <a href="https://www.linkedin.com/in/dguzto/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>
+              <a href="https://x.com/dguzto7" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">X</a>
             </div>
           </FadeIn>
           <FadeIn delay={700} direction="scale">

@@ -11,8 +11,8 @@ export async function Footer() {
         <div className="flex items-center gap-lg">
           <Link href="/newsletter" className="text-text-secondary hover:text-text-primary transition-colors">{t("nav.newsletter")}</Link>
           <Link href="/contacto" className="text-text-secondary hover:text-text-primary transition-colors">{t("nav.contact")}</Link>
-          <a href="https://linkedin.com/in/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors">LinkedIn</a>
-          <a href="https://x.com/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors">X</a>
+          <a href="https://www.linkedin.com/in/dguzto/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors">LinkedIn</a>
+          <a href="https://x.com/dguzto7" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary transition-colors">X</a>
         </div>
       </div>
     </footer>

@@ -58,7 +58,7 @@ export default async function LocaleLayout({
     "@type": "Person",
     name: "Diego Guzmán",
     url: "https://conguzto.com",
-    sameAs: ["https://linkedin.com/in/diegoguzto", "https://x.com/diegoguzto"],
+    sameAs: ["https://www.linkedin.com/in/dguzto/", "https://x.com/dguzto7"],
     jobTitle: locale === "es" ? "Estratega de crecimiento" : "Growth strategist",
     description: locale === "es" ? "Construyo y analizo negocios que crecen." : "I build and analyze growing businesses.",
   };
