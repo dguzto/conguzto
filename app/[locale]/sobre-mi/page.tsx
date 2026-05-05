@@ -46,16 +46,27 @@ export default async function AboutPage() {
             <FadeIn delay={300}><p>{t("about.bio2")}</p></FadeIn>
             <FadeIn delay={400}><p>{t("about.bio3")}</p></FadeIn>
             <FadeIn delay={500}>
+              <div className="flex flex-wrap gap-lg py-md text-[14px] text-text-muted font-medium tracking-wide">
+                <span>{t("about.stat1")}</span>
+                <span>·</span>
+                <span>{t("about.stat2")}</span>
+                <span>·</span>
+                <span>{t("about.stat3")}</span>
+                <span>·</span>
+                <span>{t("about.stat4")}</span>
+              </div>
+            </FadeIn>
+            <FadeIn delay={600}>
               <p>{t("about.bio4")}<a href="/contacto" className="text-accent font-medium hover:opacity-80 transition-opacity">{t("about.bio4Link")}</a></p>
             </FadeIn>
           </div>
-          <FadeIn delay={600}>
+          <FadeIn delay={700}>
             <div className="flex gap-md mt-xl">
               <a href="https://www.linkedin.com/in/dguzto/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>
               <a href="https://x.com/dguzto7" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">X</a>
             </div>
           </FadeIn>
-          <FadeIn delay={700} direction="scale">
+          <FadeIn delay={800} direction="scale">
             <div className="mt-2xl pt-xl border-t border-border"><NewsletterSignup /></div>
           </FadeIn>
         </div>
