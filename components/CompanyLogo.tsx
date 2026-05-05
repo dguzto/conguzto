@@ -1,33 +1,26 @@
-"use client";
-
-const COMPANY_INFO: Record<string, { domain: string }> = {
-  amenitiz: { domain: "amenitiz.com" },
-  lemlist: { domain: "lemlist.com" },
-  payhawk: { domain: "payhawk.com" },
+const COMPANY_LOGOS: Record<string, string> = {
+  amenitiz: "/logos/amenitiz.svg",
+  lemlist: "/logos/lemlist.svg",
+  payhawk: "/logos/payhawk.png",
 };
 
 export function CompanyLogo({ slug, size = 40 }: { slug: string; size?: number }) {
-  const info = COMPANY_INFO[slug];
-  const domain = info?.domain;
+  const logo = COMPANY_LOGOS[slug];
 
-  if (domain) {
+  if (logo) {
     return (
-      <a
-        href={`https://${domain}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={(e) => e.stopPropagation()}
-        className="block shrink-0 rounded-[10px] overflow-hidden hover:opacity-80 transition-opacity"
+      <div
+        className="shrink-0 rounded-[10px] overflow-hidden"
         style={{ width: size, height: size }}
       >
         <img
-          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=${size * 2}`}
+          src={logo}
           alt={slug}
           width={size}
           height={size}
           className="rounded-[10px]"
         />
-      </a>
+      </div>
     );
   }
 
