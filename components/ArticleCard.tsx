@@ -1,26 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
+import { CompanyLogo } from "./CompanyLogo";
 import type { ArticleMeta } from "@/lib/content";
-
-const BRAND_COLORS: Record<string, string> = {
-  amenitiz: "#1B2E4A",
-  lemlist: "#6C3BF5",
-  payhawk: "#2EC4B6",
-};
-
-function CompanyLogo({ slug, size = 40 }: { slug: string; size?: number }) {
-  const bg = BRAND_COLORS[slug] || "#C4703E";
-  const initial = slug.charAt(0).toUpperCase();
-  const fontSize = size < 30 ? 12 : 16;
-  return (
-    <div
-      className="rounded-[10px] flex items-center justify-center text-white font-bold shrink-0"
-      style={{ backgroundColor: bg, width: size, height: size, fontSize }}
-    >
-      {initial}
-    </div>
-  );
-}
 
 export async function ArticleCard({ article, featured = false, listItem = false, lastItem = false }: { article: ArticleMeta; featured?: boolean; listItem?: boolean; lastItem?: boolean }) {
   const t = await getTranslations("article");

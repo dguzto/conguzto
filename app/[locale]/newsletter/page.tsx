@@ -45,9 +45,6 @@ export default async function NewsletterPage() {
             <h1 className="font-heading text-[clamp(1.8rem,4vw,2.25rem)] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{t("title")}</h1>
             <p className="text-[15px] text-text-secondary mt-md leading-[1.7]">{t("subtitle")}</p>
           </FadeIn>
-          <FadeIn delay={200}>
-            <div className="mt-xl"><NewsletterSignup /></div>
-          </FadeIn>
         </div>
       </section>
       {articles.length > 0 && (
