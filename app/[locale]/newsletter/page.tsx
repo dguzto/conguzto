@@ -39,7 +39,7 @@ export default async function NewsletterPage() {
 
   return (
     <div className="bg-bg-primary min-h-screen">
-      <section className="pt-2xl pb-xl px-xl">
+      <section className="py-2xl px-xl">
         <div className="max-w-[680px] mx-auto text-center">
           <FadeIn>
             <h1 className="font-heading text-[clamp(1.8rem,4vw,2.25rem)] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{t("title")}</h1>
@@ -48,7 +48,7 @@ export default async function NewsletterPage() {
         </div>
       </section>
 
-      <section className="px-xl pb-xl">
+      <section className="px-xl pb-2xl">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-lg">
           <FadeIn delay={100} className="h-full">
             <div className="h-full bg-bg-white border border-border rounded-card p-xl">
@@ -75,7 +75,7 @@ export default async function NewsletterPage() {
       </section>
 
       {articles.length > 0 && (
-        <section className="px-xl pb-xl">
+        <section className="px-xl pb-2xl">
           <div className="max-w-[1120px] mx-auto">
             <p className="text-[12px] font-semibold tracking-[2px] uppercase text-text-muted mb-lg">{t("archive")}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-lg">
@@ -96,9 +96,9 @@ export default async function NewsletterPage() {
         </section>
       )}
 
-      <section className="px-xl py-2xl">
+      <section className="px-xl py-3xl">
         <FadeIn direction="scale">
-          <div className="max-w-[680px] mx-auto text-center">
+          <div className="max-w-[520px] mx-auto text-center">
             <h2 className="font-heading text-[clamp(1.5rem,3.5vw,2rem)] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
               {t("ctaTitle")}
             </h2>
