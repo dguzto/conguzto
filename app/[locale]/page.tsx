@@ -68,7 +68,9 @@ export default async function Home() {
         <section id="articles" className="px-xl pb-2xl">
           <div className="max-w-[1120px] mx-auto">
             <FadeIn>
-              <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("latestLabel")}</p>
+              <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-sm">{t("latestLabel")}</p>
+              <h2 className="font-heading text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-text-primary leading-[1.2] tracking-[-0.5px] mb-sm">{t("articlesTitle")}</h2>
+              <p className="text-[15px] text-text-secondary mb-2xl">{t("articlesDesc")}</p>
             </FadeIn>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
               {articles.slice(0, 3).map((article, i) => (
@@ -85,7 +87,7 @@ export default async function Home() {
       <section className="px-xl py-2xl">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-2xl items-center">
           <FadeIn direction="left">
-            <h2 className="font-heading text-[28px] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
+            <h2 className="font-heading text-[clamp(1.5rem,3.5vw,2rem)] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
               {t("split1Title")}
             </h2>
             <p className="text-[15px] text-text-secondary mt-md leading-[1.7]">
@@ -125,7 +127,7 @@ export default async function Home() {
             </div>
           </FadeIn>
           <FadeIn direction="right" delay={150} className="order-1 md:order-2">
-            <h2 className="font-heading text-[28px] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
+            <h2 className="font-heading text-[clamp(1.5rem,3.5vw,2rem)] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
               {t("split2Title")}
             </h2>
             <p className="text-[15px] text-text-secondary mt-md leading-[1.7]">
@@ -139,7 +141,7 @@ export default async function Home() {
       <section id="newsletter" className="px-xl py-3xl">
         <FadeIn direction="scale">
           <div className="max-w-[520px] mx-auto text-center">
-            <h2 className="font-heading text-[28px] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
+            <h2 className="font-heading text-[clamp(1.5rem,3.5vw,2rem)] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">
               {t("ctaTitle")}
             </h2>
             <p className="text-[15px] text-text-secondary mt-md mb-xl">{t("ctaText")}</p>

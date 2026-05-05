@@ -53,7 +53,7 @@ export async function ArticleCard({ article, featured = false, listItem = false,
       </div>
       <h3 className="text-[15px] font-semibold text-text-primary tracking-[--tracking-tight-h3] leading-[1.3]">{article.title}</h3>
       {article.subtitle && (
-        <p className="text-[13px] text-text-secondary mt-xs line-clamp-1">{article.subtitle}</p>
+        <p className="text-[13px] text-text-secondary mt-xs leading-[1.5]">{article.subtitle}</p>
       )}
     </Link>
   );
