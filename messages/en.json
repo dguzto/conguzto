@@ -23,7 +23,17 @@
   "newsletter": {
     "title": "All editions",
     "subtitle": "Each edition analyzes a company in depth and proposes a growth plan based on public data. What's working, where the opportunities are, and where to start.",
-    "archive": "Archive"
+    "archive": "Editions",
+    "ctaTitle": "The next breakdown, in your inbox",
+    "ctaText": "Every Monday, a new breakdown in your inbox."
+  },
+  "whatIDo": {
+    "card1Title": "I look through the eyes of someone who just found them",
+    "card1Text": "Website, pricing, reviews. What's already there and nobody stops to look at.",
+    "card2Title": "I find where to grow",
+    "card2Text": "What works, what doesn't, and what can be done with what they already have.",
+    "card3Title": "A plan you can copy",
+    "card3Text": "Each breakdown ends with a concrete plan. Something you can adapt to your product and your budget."
   },
   "signup": {
     "placeholder": "you@email.com",

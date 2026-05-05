@@ -9,7 +9,7 @@ export async function ArticleCard({ article, featured = false, listItem = false,
     return (
       <Link
         href={{ pathname: "/newsletter/[slug]", params: { slug: article.slug } }}
-        className="block h-full bg-bg-white border border-border rounded-card p-xl hover:shadow-card hover:border-accent hover:-translate-y-0.5 transition-all duration-200"
+        className="block h-full border border-border rounded-card p-xl hover:shadow-card hover:border-accent hover:-translate-y-0.5 transition-all duration-200"
       >
         <CompanyLogo slug={article.slug} />
         <div className="flex items-center gap-[10px] text-[12px] text-text-muted mt-md mb-md">

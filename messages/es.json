@@ -23,7 +23,17 @@
   "newsletter": {
     "title": "Todas las ediciones",
     "subtitle": "Cada edición analiza una empresa en profundidad y propone un plan de crecimiento basado en datos públicos. Qué está haciendo bien, dónde están las oportunidades, y por dónde empezar.",
-    "archive": "Archivo"
+    "archive": "Ediciones",
+    "ctaTitle": "El siguiente análisis, en tu inbox",
+    "ctaText": "Cada lunes, un análisis nuevo en tu inbox."
+  },
+  "whatIDo": {
+    "card1Title": "Me pongo en los ojos de alguien que los acaba de encontrar",
+    "card1Text": "Web, pricing, reviews. Lo que ya está ahí y nadie se para a mirar.",
+    "card2Title": "Encuentro por dónde crecer",
+    "card2Text": "Qué funciona, qué no, y qué se puede hacer con lo que ya tienen.",
+    "card3Title": "Un plan que puedes copiar",
+    "card3Text": "Cada análisis termina con un plan concreto. Algo que puedes adaptar a tu producto y tu presupuesto."
   },
   "signup": {
     "placeholder": "tu@email.com",
