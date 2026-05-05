@@ -6,8 +6,10 @@
   },
   "home": {
     "headline": "One company. One breakdown. One growth loop you can steal.",
-    "subtitle": "By Diego Guzmán · Curiosity and business.",
+    "heroTag": "Learn marketing by analyzing companies",
     "description": "Every week I break down a growing company. What works, what doesn't, and what you can copy.",
+    "ctaSubscribe": "Subscribe",
+    "ctaArticles": "Read articles",
     "latestLabel": "Latest analyses",
     "split1Title": "Everything is on their website. They just can't see it.",
     "split1Text": "Every analysis starts from what anyone can see. Website, pricing, reviews, job posts. Then finds the growth engine underneath.",

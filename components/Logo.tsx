@@ -27,11 +27,8 @@ function LogoIcon({ size = 24 }: { size?: number }) {
 
 function Logo({ size = 24 }: { size?: number }) {
   return (
-    <Link href="/" className="flex items-center gap-[10px]">
+    <Link href="/" className="flex items-center">
       <LogoIcon size={size} />
-      <span className="font-[family-name:var(--font-logo)] text-[16px] font-normal text-text-primary tracking-[2.5px]">
-        CGT
-      </span>
     </Link>
   );
 }

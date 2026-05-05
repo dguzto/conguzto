@@ -41,22 +41,31 @@ export default async function Home() {
   return (
     <div className="bg-bg-primary">
       {/* Hero */}
-      <section className="py-3xl px-xl">
-        <FadeIn>
-          <div className="max-w-[580px] mx-auto text-center">
-            <h1 className="font-heading text-[36px] font-bold text-text-primary leading-[1.15] tracking-[-1px]">
-              <span className="decoration-accent underline decoration-2 underline-offset-4">{t("headline")}</span>
+      <section className="min-h-[85vh] flex items-center justify-center px-xl">
+        <div className="max-w-[800px] mx-auto text-center">
+          <FadeIn>
+            <p className="text-[13px] font-medium text-text-secondary uppercase tracking-[3px] mb-lg">{t("heroTag")}</p>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <h1 className="font-heading text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-text-primary leading-[1.1] tracking-[-2px]">
+              {t("headline")}
             </h1>
-            <p className="text-[15px] text-text-secondary mt-md">{t("subtitle")}</p>
-            <p className="text-[15px] text-text-secondary mt-md leading-[1.6]">{t("description")}</p>
-            <div className="mt-xl bg-accent/5 rounded-card p-lg"><NewsletterSignup /></div>
-          </div>
-        </FadeIn>
+          </FadeIn>
+          <FadeIn delay={400}>
+            <p className="text-[17px] text-text-secondary mt-xl leading-[1.6] max-w-[520px] mx-auto">{t("description")}</p>
+          </FadeIn>
+          <FadeIn delay={600}>
+            <div className="mt-2xl flex gap-md justify-center">
+              <a href="#newsletter" className="bg-text-primary text-white rounded-button px-xl py-[14px] text-[15px] font-semibold hover:opacity-90 transition-opacity">{t("ctaSubscribe")}</a>
+              <a href="#articles" className="border border-border rounded-button px-xl py-[14px] text-[15px] font-semibold text-text-primary hover:border-text-muted transition-colors">{t("ctaArticles")}</a>
+            </div>
+          </FadeIn>
+        </div>
       </section>
 
       {/* Articles */}
       {articles.length > 0 && (
-        <section className="px-xl pb-2xl">
+        <section id="articles" className="px-xl pb-2xl">
           <div className="max-w-[1120px] mx-auto">
             <FadeIn>
               <p className="text-[11px] font-medium text-accent uppercase tracking-[--tracking-label] mb-md">{t("latestLabel")}</p>
@@ -127,7 +136,7 @@ export default async function Home() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="px-xl py-3xl">
+      <section id="newsletter" className="px-xl py-3xl">
         <FadeIn direction="scale">
           <div className="max-w-[520px] mx-auto text-center">
             <h2 className="font-heading text-[28px] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">

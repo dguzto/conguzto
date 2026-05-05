@@ -6,8 +6,10 @@
   },
   "home": {
     "headline": "Una empresa. Un análisis. Un growth loop que puedes copiar.",
-    "subtitle": "Por Diego Guzmán · Curiosidad y negocio.",
+    "heroTag": "Aprende marketing analizando empresas",
     "description": "Cada semana analizo una empresa que crece. Qué funciona, qué no, y qué puedes copiar.",
+    "ctaSubscribe": "Suscribirme",
+    "ctaArticles": "Leer artículos",
     "latestLabel": "Últimos análisis",
     "split1Title": "Todo está en su web. Ellos no lo ven.",
     "split1Text": "Cada análisis parte de lo que cualquiera puede ver. Web, pricing, reviews, ofertas de empleo. Y encuentra el motor de crecimiento debajo.",
