@@ -50,22 +50,22 @@ export default async function NewsletterPage() {
 
       <section className="px-xl pb-xl">
         <div className="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-lg">
-          <FadeIn delay={100}>
-            <div className="bg-bg-white border border-border rounded-card p-xl">
+          <FadeIn delay={100} className="h-full">
+            <div className="h-full bg-bg-white border border-border rounded-card p-xl">
               <svg className="w-10 h-10 mb-md text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
               <h3 className="font-heading text-[16px] font-semibold text-text-primary tracking-[-0.3px] mb-sm">{tWid("card1Title")}</h3>
               <p className="text-[14px] text-text-secondary leading-[1.6]">{tWid("card1Text")}</p>
             </div>
           </FadeIn>
-          <FadeIn delay={200}>
-            <div className="bg-bg-white border border-border rounded-card p-xl">
+          <FadeIn delay={200} className="h-full">
+            <div className="h-full bg-bg-white border border-border rounded-card p-xl">
               <svg className="w-10 h-10 mb-md text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
               <h3 className="font-heading text-[16px] font-semibold text-text-primary tracking-[-0.3px] mb-sm">{tWid("card2Title")}</h3>
               <p className="text-[14px] text-text-secondary leading-[1.6]">{tWid("card2Text")}</p>
             </div>
           </FadeIn>
-          <FadeIn delay={300}>
-            <div className="bg-bg-white border border-border rounded-card p-xl">
+          <FadeIn delay={300} className="h-full">
+            <div className="h-full bg-bg-white border border-border rounded-card p-xl">
               <svg className="w-10 h-10 mb-md text-text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               <h3 className="font-heading text-[16px] font-semibold text-text-primary tracking-[-0.3px] mb-sm">{tWid("card3Title")}</h3>
               <p className="text-[14px] text-text-secondary leading-[1.6]">{tWid("card3Text")}</p>
