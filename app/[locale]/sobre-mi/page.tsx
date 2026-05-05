@@ -1,5 +1,6 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { FadeIn } from "@/components/FadeIn";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,23 +33,31 @@ export default async function AboutPage() {
   const t = await getTranslations();
   return (
     <div className="bg-bg-primary min-h-screen">
-      <section className="py-3xl px-xl">
+      <section className="py-2xl px-xl">
         <div className="max-w-[680px] mx-auto">
-          <div className="mb-2xl">
+          <FadeIn direction="scale">
             <img src="/diego.png" alt="Diego Guzmán" className="w-[200px] h-[200px] object-cover rounded-image mb-lg" />
-            <h1 className="font-heading text-[36px] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{t("about.title")}</h1>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <h1 className="font-heading text-[clamp(1.8rem,4vw,2.25rem)] font-bold text-text-primary leading-[1.15] tracking-[-1px]">{t("about.title")}</h1>
+          </FadeIn>
+          <div className="mt-xl space-y-md text-[16px] text-text-secondary leading-[1.7]">
+            <FadeIn delay={200}><p>{t("about.bio1")}</p></FadeIn>
+            <FadeIn delay={300}><p>{t("about.bio2")}</p></FadeIn>
+            <FadeIn delay={400}><p>{t("about.bio3")}</p></FadeIn>
+            <FadeIn delay={500}>
+              <p>{t("about.bio4")}<a href="/contacto" className="text-accent font-medium hover:opacity-80 transition-opacity">{t("about.bio4Link")}</a></p>
+            </FadeIn>
           </div>
-          <div className="space-y-md text-[16px] text-text-secondary leading-[1.7]">
-            <p>{t("about.bio1")}</p>
-            <p>{t("about.bio2")}</p>
-            <p>{t("about.bio3")}</p>
-            <p>{t("about.bio4")}<a href="/contacto" className="text-accent font-medium hover:opacity-80 transition-opacity">{t("about.bio4Link")}</a></p>
-          </div>
-          <div className="flex gap-md mt-2xl">
-            <a href="https://linkedin.com/in/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>
-            <a href="https://x.com/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">X</a>
-          </div>
-          <div className="mt-2xl pt-2xl border-t border-border"><NewsletterSignup /></div>
+          <FadeIn delay={600}>
+            <div className="flex gap-md mt-xl">
+              <a href="https://linkedin.com/in/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">LinkedIn</a>
+              <a href="https://x.com/diegoguzto" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-text-primary text-[14px] transition-colors underline underline-offset-4">X</a>
+            </div>
+          </FadeIn>
+          <FadeIn delay={700} direction="scale">
+            <div className="mt-2xl pt-xl border-t border-border"><NewsletterSignup /></div>
+          </FadeIn>
         </div>
       </section>
     </div>

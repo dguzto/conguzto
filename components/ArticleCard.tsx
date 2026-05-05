@@ -8,13 +8,14 @@ const BRAND_COLORS: Record<string, string> = {
   payhawk: "#2EC4B6",
 };
 
-function CompanyLogo({ slug }: { slug: string }) {
+function CompanyLogo({ slug, size = 40 }: { slug: string; size?: number }) {
   const bg = BRAND_COLORS[slug] || "#C4703E";
   const initial = slug.charAt(0).toUpperCase();
+  const fontSize = size < 30 ? 12 : 16;
   return (
     <div
-      className="w-[40px] h-[40px] rounded-[10px] flex items-center justify-center text-white font-bold text-[16px] mb-md"
-      style={{ backgroundColor: bg }}
+      className="rounded-[10px] flex items-center justify-center text-white font-bold shrink-0"
+      style={{ backgroundColor: bg, width: size, height: size, fontSize }}
     >
       {initial}
     </div>
@@ -27,12 +28,15 @@ export async function ArticleCard({ article, featured = false, listItem = false,
     return (
       <Link
         href={{ pathname: "/newsletter/[slug]", params: { slug: article.slug } }}
-        className="block bg-bg-white border border-border rounded-card p-xl hover:shadow-card hover:border-accent hover:-translate-y-0.5 transition-all duration-200"
+        className="block h-full bg-bg-white border border-border rounded-card p-xl hover:shadow-card hover:border-accent hover:-translate-y-0.5 transition-all duration-200"
       >
-        <div className="flex items-center gap-sm mb-md">
-          <span className="text-[11px] font-medium bg-accent/10 text-accent px-sm py-[2px] rounded-full">{article.industry}</span>
-          <span className="text-xs text-text-muted">{article.country}</span>
-          <span className="text-xs text-text-muted">· {article.readingTime} min</span>
+        <CompanyLogo slug={article.slug} />
+        <div className="flex items-center gap-[10px] text-[12px] text-text-muted mt-md mb-md">
+          <span>{article.industry}</span>
+          <span>&middot;</span>
+          <span>{article.country}</span>
+          <span>&middot;</span>
+          <span>{article.readingTime} min</span>
         </div>
         <h3 className="font-heading text-[24px] font-bold text-text-primary leading-[1.2] tracking-[-0.5px]">{article.title}</h3>
         {article.subtitle && (
@@ -47,16 +51,20 @@ export async function ArticleCard({ article, featured = false, listItem = false,
     return (
       <Link
         href={{ pathname: "/newsletter/[slug]", params: { slug: article.slug } }}
-        className={`block py-lg hover:opacity-80 transition-opacity ${lastItem ? "" : "border-b border-border"}`}
+        className={`flex items-start gap-md py-lg hover:opacity-80 transition-opacity ${lastItem ? "" : "border-b border-border"}`}
       >
-        <div className="flex items-center gap-sm mb-xs">
-          <span className="text-[10px] font-medium bg-accent/10 text-accent px-sm py-[2px] rounded-full">{article.industry}</span>
-          <span className="text-xs text-text-muted">{article.readingTime} min</span>
+        <CompanyLogo slug={article.slug} size={32} />
+        <div>
+          <div className="flex items-center gap-[8px] text-[11px] text-text-muted mb-xs">
+            <span>{article.industry}</span>
+            <span>&middot;</span>
+            <span>{article.readingTime} min</span>
+          </div>
+          <h3 className="text-[15px] font-semibold text-text-primary tracking-[--tracking-tight-h3] leading-[1.3]">{article.title}</h3>
+          {article.subtitle && (
+            <p className="text-[13px] text-text-secondary mt-xs leading-[1.5]">{article.subtitle}</p>
+          )}
         </div>
-        <h3 className="text-[15px] font-semibold text-text-primary tracking-[--tracking-tight-h3] leading-[1.3]">{article.title}</h3>
-        {article.subtitle && (
-          <p className="text-[13px] text-text-secondary mt-xs leading-[1.5]">{article.subtitle}</p>
-        )}
       </Link>
     );
   }
@@ -67,7 +75,7 @@ export async function ArticleCard({ article, featured = false, listItem = false,
       className="block h-full bg-bg-white border border-border rounded-card p-xl hover:shadow-card hover:border-accent hover:-translate-y-0.5 transition-all duration-200"
     >
       <CompanyLogo slug={article.slug} />
-      <div className="flex items-center gap-[10px] text-[12px] text-text-muted mb-md">
+      <div className="flex items-center gap-[10px] text-[12px] text-text-muted mt-md mb-md">
         <span>{article.industry}</span>
         <span>&middot;</span>
         <span>{article.readingTime} min</span>

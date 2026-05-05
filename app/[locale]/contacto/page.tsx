@@ -1,5 +1,6 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { ContactForm } from "@/components/ContactForm";
+import { FadeIn } from "@/components/FadeIn";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -32,12 +33,18 @@ export default async function ContactPage() {
   const t = await getTranslations("contact");
   return (
     <div className="bg-bg-primary min-h-screen">
-      <section className="py-3xl px-xl">
+      <section className="py-2xl px-xl">
         <div className="max-w-[520px] mx-auto">
-          <h1 className="font-heading text-[36px] font-bold text-text-primary leading-[1.15] tracking-[-1px] mb-md">{t("title")}</h1>
-          <p className="text-[15px] text-text-secondary mb-2xl">{t("subtitle")}</p>
-          <ContactForm />
-          <p className="text-text-muted text-xs mt-2xl">{t("directEmail")} <a href="mailto:diego@conguzto.com" className="text-accent hover:underline">diego@conguzto.com</a></p>
+          <FadeIn>
+            <h1 className="font-heading text-[clamp(1.8rem,4vw,2.25rem)] font-bold text-text-primary leading-[1.15] tracking-[-1px] mb-sm">{t("title")}</h1>
+            <p className="text-[15px] text-text-secondary mb-2xl">{t("subtitle")}</p>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <ContactForm />
+          </FadeIn>
+          <FadeIn delay={300}>
+            <p className="text-text-muted text-xs mt-xl">{t("directEmail")} <a href="mailto:diego@conguzto.com" className="text-accent hover:underline">diego@conguzto.com</a></p>
+          </FadeIn>
         </div>
       </section>
     </div>
